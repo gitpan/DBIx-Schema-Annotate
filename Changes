@@ -1,5 +1,9 @@
 Revision history for Perl extension DBIx-Schema-Annotate
 
+0.03 2014-12-23T17:07:39Z
+
+    - fixbug. key of mysql schema is case-sensitive
+
 0.02 2014-12-23T16:18:06Z
 
     - bug fix when making more than one index

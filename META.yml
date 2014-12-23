@@ -26,7 +26,7 @@ no_index:
 provides:
   DBIx::Schema::Annotate:
     file: lib/DBIx/Schema/Annotate.pm
-    version: '0.02'
+    version: '0.03'
   DBIx::Schema::Annotate::Driver::Base:
     file: lib/DBIx/Schema/Annotate/Driver/Base.pm
   DBIx::Schema::Annotate::Driver::SQLite:
@@ -43,5 +43,5 @@ resources:
   bugtracker: https://github.com/tokubass/p5-DBIx-Schema-Annotate/issues
   homepage: https://github.com/tokubass/p5-DBIx-Schema-Annotate
   repository: git://github.com/tokubass/p5-DBIx-Schema-Annotate.git
-version: '0.02'
+version: '0.03'
 x_authority: cpan:TOKUBASS

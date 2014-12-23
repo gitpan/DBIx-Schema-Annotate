@@ -15,7 +15,7 @@ sub table_ddl {
     $inspector->table($table_name) or die 'unknown table name: ', $table_name;
 
     my $row = $self->{dbh}->selectrow_hashref(qq!SHOW CREATE TABLE $table_name!);
-    return $row->{'create table'};
+    return $row->{'Create Table'};
 }
 
 

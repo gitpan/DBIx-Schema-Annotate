@@ -58,7 +58,7 @@
    "provides" : {
       "DBIx::Schema::Annotate" : {
          "file" : "lib/DBIx/Schema/Annotate.pm",
-         "version" : "0.02"
+         "version" : "0.03"
       },
       "DBIx::Schema::Annotate::Driver::Base" : {
          "file" : "lib/DBIx/Schema/Annotate/Driver/Base.pm"
@@ -81,6 +81,6 @@
          "web" : "https://github.com/tokubass/p5-DBIx-Schema-Annotate"
       }
    },
-   "version" : "0.02",
+   "version" : "0.03",
    "x_authority" : "cpan:TOKUBASS"
 }
