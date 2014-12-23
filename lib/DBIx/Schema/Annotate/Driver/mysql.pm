@@ -1,4 +1,6 @@
 package DBIx::Schema::Annotate::Driver::mysql;
+use strict;
+use warnings;
 use parent 'DBIx::Schema::Annotate::Driver::Base';
 use Smart::Args;
 use DBIx::Inspector;

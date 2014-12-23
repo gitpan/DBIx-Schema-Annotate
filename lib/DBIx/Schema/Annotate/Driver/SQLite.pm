@@ -1,5 +1,7 @@
 package DBIx::Schema::Annotate::Driver::SQLite;
 use parent 'DBIx::Schema::Annotate::Driver::Base';
+use strict;
+use warnings;
 use Smart::Args;
 
 sub table_ddl {
@@ -13,14 +15,14 @@ sub table_ddl {
         $sth->execute($table_name);
         $sth->fetchrow_hashref;
     };
-    my $index_row = do {
+    my $index_rows = do {
         my $sth = $self->{dbh}->prepare(q! SELECT * FROM sqlite_master WHERE type='index' and tbl_name = ? !);
         $sth->execute($table_name);
-        $sth->fetchrow_hashref;
+        $sth->fetchall_hashref('sql');
     };
-
-    return $schema_row->{sql} unless $index_row->{sql};
-    return join("\n", $schema_row->{sql}, $index_row->{sql} || '' );
+    
+    return $schema_row->{sql} unless scalar keys %$index_rows;
+    return join("\n", $schema_row->{sql}, sort keys %$index_rows);
 }
 
 1;

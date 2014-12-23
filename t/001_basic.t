@@ -12,11 +12,13 @@ my $sql1 =<<END;
 CREATE TABLE mock_basic (
   id   integer,
   name text,
+  desc text,
   primary key ( id )
 )
 END
 chomp($sql1);
-my $sql1_index='CREATE INDEX tet_index on mock_basic(name)';
+my $sql1_index='CREATE INDEX test_index on mock_basic(name)';
+my $sql1_index2='CREATE INDEX test_index2 on mock_basic(desc)';
 
 
 my $sql2 =<<END;
@@ -31,7 +33,8 @@ chomp($sql2);
 my $annotate = DBIx::Schema::Annotate->new( dbh => $dbh );
 $dbh->do($sql1);
 $dbh->do($sql1_index);
-is($annotate->get_table_ddl( table_name => 'mock_basic' ), join("\n", $sql1, $sql1_index));
+$dbh->do($sql1_index2);
+is($annotate->get_table_ddl( table_name => 'mock_basic' ), join("\n", $sql1, $sql1_index,$sql1_index2));
 
 $dbh->do($sql2);
 is($annotate->get_table_ddl( table_name => 'mock_basic2' ), $sql2);
@@ -54,9 +57,11 @@ is($dest->all."\n", <<"END");
 # CREATE TABLE mock_basic (
 #   id   integer,
 #   name text,
+#   desc text,
 #   primary key ( id )
 # )
-# CREATE INDEX tet_index on mock_basic(name)
+# CREATE INDEX test_index on mock_basic(name)
+# CREATE INDEX test_index2 on mock_basic(desc)
 ## == Schema Info ==
 
 $src_content

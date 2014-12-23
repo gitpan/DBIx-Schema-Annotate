@@ -1,5 +1,9 @@
 Revision history for Perl extension DBIx-Schema-Annotate
 
+0.02 2014-12-23T16:18:06Z
+
+    - bug fix when making more than one index
+
 0.01 2014-12-23T15:53:59Z
 
     - original version
