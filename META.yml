@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   Module::Build::Tiny: '0.035'
 dynamic_config: 0
-generated_by: 'Minilla/v2.3.0, CPAN::Meta::Converter version 2.143240'
+generated_by: 'Minilla/v2.2.1, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -26,7 +26,7 @@ no_index:
 provides:
   DBIx::Schema::Annotate:
     file: lib/DBIx/Schema/Annotate.pm
-    version: '0.03'
+    version: '0.04'
   DBIx::Schema::Annotate::Driver::Base:
     file: lib/DBIx/Schema/Annotate/Driver/Base.pm
   DBIx::Schema::Annotate::Driver::SQLite:
@@ -43,5 +43,5 @@ resources:
   bugtracker: https://github.com/tokubass/p5-DBIx-Schema-Annotate/issues
   homepage: https://github.com/tokubass/p5-DBIx-Schema-Annotate
   repository: git://github.com/tokubass/p5-DBIx-Schema-Annotate.git
-version: '0.03'
+version: '0.04'
 x_authority: cpan:TOKUBASS

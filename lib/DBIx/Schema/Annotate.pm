@@ -7,7 +7,7 @@ use Smart::Args;
 use IO::All;
 use Module::Load ();
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 our $BLOCK_LINE = '## == Schema Info ==';
 
@@ -136,9 +136,12 @@ DBIx::Schema::Annotate - Add table schema as comment to your ORM file. This modu
 
 =head1 DESCRIPTION
 
-Schema is added to pm file of specified path follower of the same name as table.
-This is supporting MySQL and SQLite.
+Schema is added to pm file of specified path follower of the same camelize name as table.
 
+For example 'post' table and 'post_comment' table exist, and we assume that $self->write_files(dir => $dir) was carried out.
+The targets to which DBIx::Schema::Annotate adds a annotate are $dir/Post.pm and $dir/PostComment.pm.
+
+This module is supporting MySQL and SQLite.
 
 =head1 METHODS
 
@@ -148,7 +151,7 @@ Constructor.
 
 =head2 write_files( dir => 'path/to/...' )
 
-Schema is added to pm file of 'path/to/...' follower of the same name as table.
+Schema is added to pm file of 'path/to/...' follower of the same camelize name as table.
 
 =head1 LICENSE
 

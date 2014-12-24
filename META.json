@@ -4,7 +4,7 @@
       "tokubass <tokubass@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v2.3.0",
+   "generated_by" : "Minilla/v2.2.1",
    "license" : [
       "perl_5"
    ],
@@ -58,7 +58,7 @@
    "provides" : {
       "DBIx::Schema::Annotate" : {
          "file" : "lib/DBIx/Schema/Annotate.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "DBIx::Schema::Annotate::Driver::Base" : {
          "file" : "lib/DBIx/Schema/Annotate/Driver/Base.pm"
@@ -81,6 +81,6 @@
          "web" : "https://github.com/tokubass/p5-DBIx-Schema-Annotate"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_authority" : "cpan:TOKUBASS"
 }
